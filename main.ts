@@ -598,10 +598,6 @@ function animateIdle () {
         `)
 }
 function endCutscene () {
-    clearGame()
-    color.startFade(color.Black, color.originalPalette, 500)
-    color.pauseUntilFadeDone()
-    endMusic()
     end2 = sprites.create(img`
         8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
         8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
@@ -725,12 +721,14 @@ function endCutscene () {
         66666666666666666666cccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbccccccc
         `, SpriteKind.goodEnd)
     end2.setFlag(SpriteFlag.RelativeToCamera, true)
-    game.splash("")
+    clearGame()
+    color.startFade(color.Black, color.originalPalette, 500)
+    color.pauseUntilFadeDone()
+    endMusic()
     showInstruction("Finally, after defeating the slimes of this world, peace is restored once more.")
     showInstruction("You," + name + ", will be remembered as a hero of your adventure...")
     showInstruction("Hey " + name + "! The game creator here. I just wanted to say thank you for finishing this game. This was a very tedious game, but everything went out smoothly. Stay safe!")
     game.over(true, effects.bubbles)
-    end2.setStayInScreen(true)
 }
 function level1Music () {
     music.stopAllSounds()
