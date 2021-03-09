@@ -138,6 +138,10 @@ namespace myTiles {
     export const tile66 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
     export const tile67 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile68 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile69 = image.ofBuffer(hex``);
 
     helpers._registerFactory("tilemap", function(name: string) {
         switch(helpers.stringTrim(name)) {
@@ -623,6 +627,25 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `, [myTiles.transparency16], TileScale.Sixteen);
+            case "level6":
+            case "level6":return tiles.createTilemap(hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000202040000030300000402020000000002020606060606060606020200000000000000000000000000000000000000000000000000000000000000000000040700000000000000000000000007040606060600000000000000000606060600000000000000000000000000000000000000000000000000000000000000000000000000060000000006000000000000000500000000050500000000050000000000000100000000000000000000000007000000000000000000000000070006060606060606060606060606060606`, img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . 2 2 2 2 2 2 2 2 . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. 2 . . . . . . . . . . . . 2 . 
+2 2 2 2 . . . . . . . . 2 2 2 2 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . 2 . . . . 2 . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. 2 . . . . . . . . . . . . 2 . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`, [myTiles.transparency16,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile20,myTiles.tile68,myTiles.tile69], TileScale.Sixteen);
         }
         return null;
     })
@@ -699,6 +722,10 @@ namespace myTiles {
             case "tile":
             case "tile66":return tile66;
             case "tile67":return tile67;
+            case "myTile":
+            case "tile68":return tile68;
+            case "myTile0":
+            case "tile69":return tile69;
         }
         return null;
     })
