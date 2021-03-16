@@ -2746,7 +2746,37 @@ info.onLifeZero(function () {
     game.over(false, effects.splatter)
 })
 function levelSPMusic () {
-	
+    music.setTempo(100)
+    for (let index = 0; index < 1; index++) {
+        music.playTone(330, music.beat(BeatFraction.Quarter))
+        music.playTone(330, music.beat(BeatFraction.Half))
+        music.playTone(330, music.beat(BeatFraction.Half))
+        music.playTone(262, music.beat(BeatFraction.Quarter))
+        music.playTone(330, music.beat(BeatFraction.Half))
+        music.playTone(392, music.beat(BeatFraction.Whole))
+        music.playTone(196, music.beat(BeatFraction.Whole))
+    }
+    for (let index = 0; index < 2; index++) {
+        music.playTone(523, music.beat(BeatFraction.Half))
+        music.playTone(523, music.beat(BeatFraction.Quarter))
+        music.playTone(392, music.beat(BeatFraction.Half))
+        music.playTone(392, music.beat(BeatFraction.Quarter))
+        music.playTone(330, music.beat(BeatFraction.Half))
+        music.playTone(440, music.beat(BeatFraction.Half))
+        music.playTone(494, music.beat(BeatFraction.Half))
+        music.playTone(466, music.beat(BeatFraction.Quarter))
+        music.playTone(440, music.beat(BeatFraction.Half))
+        music.playTone(392, music.beat(BeatFraction.Half))
+        music.playTone(659, music.beat(BeatFraction.Quarter))
+        music.playTone(784, music.beat(BeatFraction.Quarter))
+        music.playTone(880, music.beat(BeatFraction.Half))
+        music.playTone(698, music.beat(BeatFraction.Quarter))
+        music.playTone(784, music.beat(BeatFraction.Half))
+        music.playTone(659, music.beat(BeatFraction.Half))
+        music.playTone(523, music.beat(BeatFraction.Quarter))
+        music.playTone(587, music.beat(BeatFraction.Quarter))
+        music.playTone(494, music.beat(BeatFraction.Half))
+    }
 }
 function showInstruction (text: string) {
     game.showLongText(text, DialogLayout.Bottom)
